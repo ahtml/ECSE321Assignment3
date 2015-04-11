@@ -57,5 +57,11 @@ public abstract class Critter {
 	public int removeHealth(){ // The amount of health removed by the player if the critter reaches the end
 		return (health+speed)*(id+1);
 	}
+	
+	//Display info:
+	public void displayCritterInfo(){
+		System.out.println("Critter ID: " + getId() + "\nHealth: " + getHealth() + "\nSpeed: " + getSpeed() + "\nValue: " + getValue());
+	}
+	
 
 }
