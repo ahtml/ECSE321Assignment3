@@ -1,16 +1,23 @@
 
-public abstract class Critter {
+public class Critter {
 	
 	private int health;
 	private int speed;
 	private int position;
 	private int id;
+	private int index;
 	private int value;
 	private boolean isAlive;
 	
 	// GETTERS AND SETTERS
 	public boolean isAlive() {
 		return isAlive;
+	}
+	public int getIndex() {
+		return index;
+	}
+	public void setIndex(int index) {
+		this.index = index;
 	}
 	public void setAlive(boolean isAlive) {
 		this.isAlive = isAlive;
@@ -50,7 +57,10 @@ public abstract class Critter {
 		// Not needed for the assignment
 	}
 	
-	public void calculateValue(){ // The amount of money returned to player if the critter is killed
+	/**
+	 * Determine the value of the Critter once it is killed
+	 */
+	public void calculateValue(){ 
 		value = (health+speed)*(id+1);
 	}
 	
@@ -58,9 +68,11 @@ public abstract class Critter {
 		return (health+speed)*(id+1);
 	}
 	
-	//Display info:
+	/**
+	 * Displays the info about the Critter
+	 */
 	public void displayCritterInfo(){
-		System.out.println("Critter ID: " + getId() + "\nHealth: " + getHealth() + "\nSpeed: " + getSpeed() + "\nValue: " + getValue());
+		System.out.println("Critter Index: " + getIndex() +  "\nCritter ID: " + getId() + "\nHealth: " + getHealth() + "\nSpeed: " + getSpeed() + "\nValue: " + getValue());
 	}
 	
 
