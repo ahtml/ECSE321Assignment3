@@ -50,8 +50,12 @@ public abstract class Critter {
 		// Not needed for the assignment
 	}
 	
-	public void calculateValue(){
+	public void calculateValue(){ // The amount of money returned to player if the critter is killed
 		value = (health+speed)*(id+1);
+	}
+	
+	public int removeHealth(){ // The amount of health removed by the player if the critter reaches the end
+		return (health+speed)*(id+1);
 	}
 
 }
