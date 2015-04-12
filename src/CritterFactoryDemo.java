@@ -14,6 +14,7 @@ public class CritterFactoryDemo {
 		
 		do{ // Make at least one round of critters
 			myCritterFactory.setIndexLevel(level);
+			System.out.println("Current Level: " + level);
 			myCritters.clear(); // Clear the critters list so that the wave does not include previous waves' critters
 			for(int i=0;i<level*3;i++){ // Creating 3 times the level of critters each level
 				// System.out.println(i);

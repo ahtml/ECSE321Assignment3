@@ -1,7 +1,7 @@
 
 public class CritterFactory {
 	
-	double indexLevel = 0.1; // Critters stats will change as the levels progress
+	private double indexLevel = 0.1; // Critters stats will change as the levels progress
 	
 	public Critter makeCritter(CritterType type){
 		Critter critter = new Critter();
